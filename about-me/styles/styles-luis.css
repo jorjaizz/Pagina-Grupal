@@ -1,0 +1,172 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* Base */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.7;
+  padding: 40px 20px;
+}
+ 
+/* Contenedores */
+.caja {
+  background: #ffffff;
+  max-width: 720px;
+  margin: 0 auto 30px;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+ 
+/* Títulos */
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+ 
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+ 
+/* Separador */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 20px 0;
+}
+ 
+/* Texto */
+p {
+  margin-bottom: 15px;
+}
+ 
+/* Listas */
+ul {
+  list-style: none;
+}
+ 
+ul li {
+  margin-bottom: 10px;
+}
+ 
+/* Imágenes (regla global) */
+img {
+  display: block;
+  margin: 10px 0 25px;
+  max-width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+ 
+/* Contacto */
+#contactame li {
+  font-size: 0.95rem;
+  color: #444;
+}
+ 
+/* Links */
+a {
+  color: #000;
+  text-decoration: underline;
+}
+ 
+a:hover {
+  opacity: 0.7;
+}
+
+/* -----------------------------
+   Reglas nuevas para <details>
+   -----------------------------*/
+
+/* Estilo general del elemento details */
+details {
+  margin: 1rem 0;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e9e9e9;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+}
+
+/* Summary (encabezado desplegable) */
+details summary {
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Añadir un icono simple con pseudo-elemento (triángulo) */
+details summary::marker {
+  /* para navegadores que usan marker, lo dejamos vacío */
+  content: "";
+}
+details[open] summary::after,
+details summary::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 6px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #333; /* triángulo apuntando hacia abajo por defecto */
+  transform: rotate(0deg);
+  transition: transform 0.18s ease;
+}
+details[open] summary::after {
+  transform: rotate(180deg); /* gira cuando está abierto */
+}
+
+/* Contenedor que hará el layout horizontal */
+.details-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 0.75rem; /* separación entre summary y contenido */
+  flex-wrap: wrap; /* permite que baje a la siguiente línea en pantallas pequeñas */
+}
+
+/* Bloque textual dentro de details (por ejemplo, descripciones) */
+.details-content .detalle-texto {
+  min-width: 180px;
+  max-width: 320px;
+  color: #333;
+}
+
+/* Imágenes dentro de details: tamaño fijo y uniforme */
+.details-content img {
+  width: 135px;
+  height: 145px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  margin: 0; /* quitar el margen global y usar gap del flex */
+  flex: 0 0 auto; /* evitar que la imagen se estire */
+}
+
+/* Si quieres que las imágenes tengan un contenedor para texto alternativo o caption */
+.details-content .img-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+
+
+/* Ajustes estéticos opcionales */
+details:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}

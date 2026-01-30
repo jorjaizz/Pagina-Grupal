@@ -1,80 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Pagina de Luis</title>
+  <meta charset="UTF-8">
+  <title>Página de luis-argg</title>
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Base */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    /* Contenedores */
+    .caja {
+      background: #ffffff;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+    }
+
+    /* Títulos */
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    /* Separador */
+    hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 20px 0;
+    }
+
+    /* Texto */
+    p {
+      margin-bottom: 15px;
+    }
+
+    /* Listas */
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Imágenes */
+    img {
+      display: block;
+      margin: 10px 0 25px;
+      max-width: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+
+    /* Links */
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      opacity: 0.7;
+    }
+
+    /* DETAILS */
+    details {
+      margin: 1rem 0;
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #e9e9e9;
+      background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+    }
+
+    details summary {
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    details summary::marker {
+      content: "";
+    }
+
+    details summary::after {
+      content: "";
+      width: 0;
+      height: 0;
+      margin-left: 6px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 8px solid #333;
+      transition: transform 0.18s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .details-content {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .details-content img {
+      width: 135px;
+      height: 145px;
+      margin: 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <h1>Hola soy Luis Argueta :v </h1>
-        <p>Bienvenido a conocer a Luis Arg xd </p>
-        <hr>
-        <hr>
-        <hr>
-    </header>
-
-    <section>
-        <h2>Sobre mí :</h2>
-            <p>
-             Soy estudiante de Fundación Kinal y estudio la carrera de Informatica
-             <br>
-             Tengo 16 años.
-            </p>
-                <hr>
-            <p>
-             Me gusta tanto el futbol, que soy hincha del FC Barcelona
-            </p>
-            <img src="https://i.pinimg.com/originals/28/3c/21/283c2135a46f4f3087532a39ba92afcc.gif" alt="FC Barcelona" width="130" height="120">
-
-            <p>
-             A su vez me gusta el beisbol, soy fanatico de los Guardianes de Cleveland-Ohio
-            </p>
-            <img src="https://i.pinimg.com/originals/0e/17/8d/0e178d258495bfd4092a211a76d83fad.gif"  alt="Cleveland-Ohio" width="130"  height="120">
-
-            <hr>
-        <details>
-            <summary>Más sobre mi</summary>
-            <p>Me gusta el cine</p> 
-            <p>Aqui mi top 4 de peliculas en general</p>
-            <img src="https://m.media-amazon.com/images/I/711ewSpPgUL._SL1200_.jpg" alt="pelicula tuff " width="135" height="145">
-            <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Whiplash_short_poster.jpg" alt="pelicula tuff 3" width="135" height="145">
-            <img src="https://i.pinimg.com/1200x/0e/5e/75/0e5e758181d162446a2a3023b16df391.jpg" alt="pelicula tuff 2" width="135" height="145">
-            <img src="https://upload.wi kimedia.org/wikipedia/en/7/7c/Vitaebella.jpg" alt="pelicula tuff 4" width="135" height="145">
-        </details>
-    </section>
+  <div class="caja">
+    <h1>Luis Argueta</h1>
+    <p>Hola w</p>
 
     <hr>
 
-    <section>
-        <h2>Mis hobbies:</h2>
-        <ul>
-            <li> Jugar al minecraft</li>
-            <li> Tocar la guitarra</li>
-            <li> Ver contenido audiovisual</li>
+    <h3>Sobre mí</h3>
+    <p>
+      Soy estudiante de Fundación Kinal y estudio la carrera de Informática.<br>
+      Tengo 16 años.<br>
+      Vivo en la ciudad de Guatemala.
+    </p>
 
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Musica</h2>
-        <label> Escucho kanye west papa</label>
-        <br>
-    </section>
+    <p>Soy hincha del FC Barcelona ⚽</p>
+    <img src="./multimedia/images/barca dp.gif" alt="FC Barcelona">
 
-    <hr>
+    <p>También soy fanático de los Guardianes de Cleveland (MLB).</p>
+    <img src="./multimedia/images/gif lindor.gif" alt="Cleveland Guardians">
 
-    <section>
-        <h2>Mis contactos</h2>  
-        <a href="https://github.com/luis-argg">GitHub</a>
-        <br>
-    </section>
+    <details>
+      <summary>Más sobre mí</summary>
 
-    <hr>
+      <p>Me gusta el cine y este es mi top 4:</p>
 
-    <footer>
-        <p>CAPY WAS HERE </p>
-    </footer>
+      <div class="details-content">
+        <img src="./multimedia/images/jurssicposter.jpg" alt="Jurassic Park">
+        <img src="./multimedia/images/whiplash psoter.jpg" alt="Whiplash">
+        <img src="./multimedia/images/neon genesis poster.jpg" alt="Evangelion">
+        <img src="./multimedia/images/vidabella poster.jpg" alt="La vida es bella">
+      </div>
+    </details>
+  </div>
+
+  <div class="caja">
+    <h3>Mis hobbies</h3>
+    <ul>
+      <li>🎮 Jugar Minecraft</li>
+      <li>🎸 Tocar guitarra</li>
+      <li>🎬 Ver contenido audiovisual</li>
+    </ul>
+  </div>
+
+  <div class="caja">
+    <h3>Mis artistas</h3>
+
+    <p>Kanye West</p>
+    <img src="./multimedia/images/Ye.jpg" alt="Kanye West">
+
+    <p>The Cure</p>
+    <img src="./multimedia/images/the cure.jpg" alt="The Cure">
+
+    <p>The Beatles</p>
+    <img src="./multimedia/images/bitles.jpg" alt="The Beatles">
+
+    <p>Gustavo Cerati</p>
+    <img src="./multimedia/images/cerati.jpg" alt="Cerati">
+  </div>
+
+  <div class="caja">
+    <h3>Contacto</h3>
+    <ul>
+      <li><a href="https://github.com/luis-argg">GitHub</a></li>
+      <li><a href="#">Playlist YouTube</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>@CAPY WAS HERE</p>
+  </footer>
 
 </body>
 </html>
