@@ -1,0 +1,85 @@
+/* Configuración Base */
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #FAF9F6; /* Beige muy claro */
+    color: #3A3A3A;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #E6EFEA 0%, #F5F5DC 100%);
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #3A7D5C; /* Verde principal */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #6B6B6B;
+    font-size: 1.2rem;
+}
+
+/* Tarjetas de Secciones */
+.card {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #6BAF92; /* Verde suave */
+    border-bottom: 2px solid #6BAF92;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de Imágenes (Flexbox) */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Estilo de Imágenes */
+img {
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    filter: brightness(95%);
+}
+
+img.small {
+    width: 150px;
+    height: 150px;
+}
+
+img:hover {
+    transform: translateY(-8px);
+    filter: brightness(100%);
+    box-shadow: 0 10px 20px rgba(107, 175, 146, 0.4);
+    border: 2px solid #6BAF92;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
