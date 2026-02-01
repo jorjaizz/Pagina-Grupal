@@ -2,179 +2,55 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Página de luis-argg</title>
-
-  <style>
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Base */
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #f5f5f5;
-      color: #222;
-      line-height: 1.7;
-      padding: 40px 20px;
-    }
-
-    /* Contenedores */
-    .caja {
-      background: #ffffff;
-      max-width: 720px;
-      margin: 0 auto 30px;
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid #e0e0e0;
-    }
-
-    /* Títulos */
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      font-weight: 500;
-      margin-bottom: 15px;
-    }
-
-    /* Separador */
-    hr {
-      border: none;
-      border-top: 1px solid #e0e0e0;
-      margin: 20px 0;
-    }
-
-    /* Texto */
-    p {
-      margin-bottom: 15px;
-    }
-
-    /* Listas */
-    ul {
-      list-style: none;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    /* Imágenes */
-    img {
-      display: block;
-      margin: 10px 0 25px;
-      max-width: 100%;
-      border-radius: 6px;
-      object-fit: cover;
-    }
-
-    /* Links */
-    a {
-      color: #000;
-      text-decoration: underline;
-    }
-
-    a:hover {
-      opacity: 0.7;
-    }
-
-    /* DETAILS */
-    details {
-      margin: 1rem 0;
-      padding: 0.75rem;
-      border-radius: 6px;
-      border: 1px solid #e9e9e9;
-      background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
-    }
-
-    details summary {
-      font-weight: 700;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    details summary::marker {
-      content: "";
-    }
-
-    details summary::after {
-      content: "";
-      width: 0;
-      height: 0;
-      margin-left: 6px;
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 8px solid #333;
-      transition: transform 0.18s ease;
-    }
-
-    details[open] summary::after {
-      transform: rotate(180deg);
-    }
-
-    .details-content {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      margin-top: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .details-content img {
-      width: 135px;
-      height: 145px;
-      margin: 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-    }
-  </style>
+  <title>Pagina de luis-argg</title>
+  <link rel="stylesheet" href="./styles/styles-luis.css">
 </head>
-
 <body>
 
-  <div class="caja">
-    <h1>Luis Argueta</h1>
-    <p>Hola w</p>
+  <div class="banner">
+  <h1>Luis Argueta</h1>
+  <span class="subtitle">Estudiante de Informatica</span>
+</div>
 
-    <hr>
 
-    <h3>Sobre mí</h3>
+    <h3>Sobre mi</h3>
     <p>
-      Soy estudiante de Fundación Kinal y estudio la carrera de Informática.<br>
-      Tengo 16 años.<br>
-      Vivo en la ciudad de Guatemala.
+      Soy estudiante de Fundacion Kinal y estudio la carrera de Informatica<br>
+      Tengo 16 anos<br>
+      Vivo en la ciudad de Guatemala
     </p>
 
-    <p>Soy hincha del FC Barcelona ⚽</p>
-    <img src="./multimedia/images/barca dp.gif" alt="FC Barcelona">
+    <p>Soy hincha del FC Barcelona</p>
+    <img src="./multimedia/images/barca-dp2.gif" alt="FC Barcelona" width="340" height="200">
 
-    <p>También soy fanático de los Guardianes de Cleveland (MLB).</p>
-    <img src="./multimedia/images/gif lindor.gif" alt="Cleveland Guardians">
+    <p>Tambien soy fanatico de los Guardianes de Cleveland</p>
+    <img src="./multimedia/images/gif-lindor.gif" alt="Cleveland Guardians">
 
-    <details>
-      <summary>Más sobre mí</summary>
-
-      <p>Me gusta el cine y este es mi top 4:</p>
+    <details >
+      <summary>Mas sobre mi</summary>
 
       <div class="details-content">
-        <img src="./multimedia/images/jurssicposter.jpg" alt="Jurassic Park">
-        <img src="./multimedia/images/whiplash psoter.jpg" alt="Whiplash">
-        <img src="./multimedia/images/neon genesis poster.jpg" alt="Evangelion">
-        <img src="./multimedia/images/vidabella poster.jpg" alt="La vida es bella">
+
+        <div class="detalle-texto">
+          <p>Me gusta el cine y este es mi top 4</p>
+        </div>
+
+        <div class="">
+          <img src="./multimedia/images/jurssic-poster.jpg" alt="Jurassic Park">
+        </div>
+
+        <div class="">
+          <img src="./multimedia/images/whiplash-poster.jpg" alt="Whiplash">
+        </div>
+
+        <div class="">
+          <img src="./multimedia/images/neon-genesis-poster.jpg" alt="Evangelion">
+        </div>
+
+        <div class="">
+          <img src="./multimedia/images/vidabella-poster.jpg" alt="La vida es bella">
+        </div>
+
       </div>
     </details>
   </div>
@@ -182,33 +58,42 @@
   <div class="caja">
     <h3>Mis hobbies</h3>
     <ul>
-      <li>🎮 Jugar Minecraft</li>
-      <li>🎸 Tocar guitarra</li>
-      <li>🎬 Ver contenido audiovisual</li>
+      <li>Jugar Minecraft</li>
+      <li>Tocar guitarra</li>
+      <li>Ver contenido audiovisual</li>
     </ul>
   </div>
 
   <div class="caja">
     <h3>Mis artistas</h3>
 
-    <p>Kanye West</p>
-    <img src="./multimedia/images/Ye.jpg" alt="Kanye West">
+    <strong>Kanye West</strong>
+    <a href="https://music.youtube.com/channel/UCRY5dYsbIN5TylSbd7gVnZg">
+      <img src="./multimedia/images/Ye.jpg" alt="Kanye West">
+    </a>
 
-    <p>The Cure</p>
-    <img src="./multimedia/images/the cure.jpg" alt="The Cure">
+    <strong>The Cure</strong>
+    <a href="https://music.youtube.com/channel/UCKuG9-MGolUuWbEcoz5qijw">
+      <img src="./multimedia/images/the-cure.jpg" alt="The Cure">
+    </a>
 
-    <p>The Beatles</p>
-    <img src="./multimedia/images/bitles.jpg" alt="The Beatles">
+    <strong>The Beatles</strong>
+    <a href="https://music.youtube.com/channel/UC2XdaAVUannpujzv32jcouQ">
+      <img src="./multimedia/images/bitles.jpg" alt="Beatles">
+    </a>
 
-    <p>Gustavo Cerati</p>
-    <img src="./multimedia/images/cerati.jpg" alt="Cerati">
+    <strong>Gustavo Cerati</strong>
+    <a href="https://music.youtube.com/channel/UCUdjkQsRH3EgFvbVWNznYPQ">
+      <img src="./multimedia/images/cerati.jpg" alt="Cerati">
+    </a>
+
   </div>
 
   <div class="caja">
     <h3>Contacto</h3>
-    <ul>
+    <ul id="contactame">
       <li><a href="https://github.com/luis-argg">GitHub</a></li>
-      <li><a href="#">Playlist YouTube</a></li>
+      <li><a href="">Playlist YouTube</a></li>
     </ul>
   </div>
 
