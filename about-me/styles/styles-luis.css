@@ -1,93 +1,135 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
- 
-/* Base */
+
+/* =========================
+   BASE GENERAL
+========================= */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: #f5f5f5;
   color: #222;
   line-height: 1.7;
   padding: 40px 20px;
 }
- 
-/* Contenedores */
-.caja {
-  background: #ffffff;
-  max-width: 720px;
-  margin: 0 auto 30px;
-  padding: 30px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
+
+/* =========================
+   TEXTOS
+========================= */
+h1, h3 {
+  font-family: 'Poppins', sans-serif;
 }
- 
-/* Títulos */
+
 h1 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
- 
+
 h3 {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 15px;
 }
- 
-/* Separador */
+
+p {
+  margin-bottom: 15px;
+}
+
+/* =========================
+   CONTENEDORES
+========================= */
+.caja {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 30px;
+  padding: 30px;
+
+  background: #ffffff;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+
+  animation: fadeUp 0.6s ease both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* =========================
+   SEPARADOR
+========================= */
 hr {
   border: none;
   border-top: 1px solid #e0e0e0;
   margin: 20px 0;
 }
- 
-/* Texto */
-p {
-  margin-bottom: 15px;
-}
- 
-/* Listas */
+
+/* =========================
+   LISTAS
+========================= */
 ul {
   list-style: none;
 }
- 
+
 ul li {
   margin-bottom: 10px;
 }
- 
-/* Imágenes (regla global) */
+
+/* =========================
+   IMÁGENES (GLOBAL)
+========================= */
 img {
   display: block;
-  margin: 10px 0 25px;
   max-width: 100%;
+  margin: 10px 0 25px;
   border-radius: 6px;
   object-fit: cover;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
- 
-/* Contacto */
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   CONTACTO
+========================= */
 #contactame li {
   font-size: 0.95rem;
   color: #444;
 }
- 
-/* Links */
-a {
-  color: #000;
-  text-decoration: underline;
-}
- 
-a:hover {
-  opacity: 0.7;
-}
 
-/* -----------------------------
-   Reglas nuevas para <details>
-   -----------------------------*/
-
-/* Estilo general del elemento details */
+/* =========================
+   DETAILS
+========================= */
 details {
   margin: 1rem 0;
   padding: 0.75rem;
@@ -96,77 +138,221 @@ details {
   background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
 }
 
-/* Summary (encabezado desplegable) */
 details summary {
   font-weight: 700;
   cursor: pointer;
-  list-style: none;
-  outline: none;
   user-select: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  list-style: none;
 }
 
-/* Añadir un icono simple con pseudo-elemento (triángulo) */
 details summary::marker {
-  /* para navegadores que usan marker, lo dejamos vacío */
   content: "";
 }
-details[open] summary::after,
+
 details summary::after {
   content: "";
-  display: inline-block;
   width: 0;
   height: 0;
   margin-left: 6px;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 8px solid #333; /* triángulo apuntando hacia abajo por defecto */
-  transform: rotate(0deg);
+  border-top: 8px solid #333;
   transition: transform 0.18s ease;
 }
+
 details[open] summary::after {
-  transform: rotate(180deg); /* gira cuando está abierto */
+  transform: rotate(180deg);
 }
 
-/* Contenedor que hará el layout horizontal */
+details:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}
+
+/* =========================
+   DETAILS CONTENT
+========================= */
 .details-content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
-  align-items: flex-start;
-  margin-top: 0.75rem; /* separación entre summary y contenido */
-  flex-wrap: wrap; /* permite que baje a la siguiente línea en pantallas pequeñas */
+  margin-top: 1rem;
 }
 
-/* Bloque textual dentro de details (por ejemplo, descripciones) */
-.details-content .detalle-texto {
-  min-width: 180px;
-  max-width: 320px;
+.detalle-texto {
+  flex: 0 0 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
   color: #333;
 }
 
-/* Imágenes dentro de details: tamaño fijo y uniforme */
 .details-content img {
-  width: 135px;
-  height: 145px;
-  border-radius: 6px;
+  width: 120px;
+  height: 140px;
+  margin: 0;
   box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  margin: 0; /* quitar el margen global y usar gap del flex */
-  flex: 0 0 auto; /* evitar que la imagen se estire */
 }
 
-/* Si quieres que las imágenes tengan un contenedor para texto alternativo o caption */
-.details-content .img-wrap {
+.hobbies {
+  font-family: 'VT323', monospace;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   ARTISTAS
+========================= */
+.caja:nth-of-type(3) img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.caja:nth-of-type(3) img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   ARTISTAS / ALBUMES
+========================= */
+.artistas .artista {
+  margin-bottom: 30px;
+}
+
+.artistas strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.albums {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.albums img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.albums img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+/* =========================
+   BANNER
+========================= */
+.banner {
+  position: relative;
+  width: 100vw;
+  min-height: 220px;
+
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  justify-content: center;
   align-items: center;
+
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  overflow: hidden;
 }
 
+.banner h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: 'Source Code pro', monospace;
+  text-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
 
+.banner .subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
 
-/* Ajustes estéticos opcionales */
-details:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #f5f5f5;
+  border-radius: 100% 100% 0 0;
+}
+
+/* =========================
+   ANIMACIONES
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =========================
+   CONTACTOS (TARJETAS)
+========================= */
+.contactos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: #222;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+
+.contact-card img {
+  width: 42px;
+  height: 42px;
+  margin: 0;
+}
+
+.contact-card span {
+  font-weight: 600;
+  font-size: 0.95rem;
 }
